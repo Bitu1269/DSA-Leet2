@@ -3,7 +3,7 @@ class Solution {
         long res=1;
         long count=1;
         for(int i=1; i<prices.length; i++){
-            if(prices[i-1]- prices[i] ==1){
+            if(prices[i-1]== prices[i]+1){
                 count++;
             }else{
                 count=1;
