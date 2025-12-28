@@ -4,14 +4,14 @@ class Solution {
         int len=grid[0].length;
         for(int i=0; i<grid.length; i++){
             int firstNegative=-1;
-            for(int j=0; j<grid[0].length; j++){
+            for(int j=0; j<len; j++){
                 if(grid[i][j] < 0){
                     firstNegative=j;
                     break;
                 }
             }
             if(firstNegative != -1){
-                count += (grid[0].length - firstNegative);
+                count += (len - firstNegative);
             }
         }
         return count;
