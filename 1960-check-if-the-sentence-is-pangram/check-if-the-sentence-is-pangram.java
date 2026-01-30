@@ -16,8 +16,11 @@ class Solution {
 
         HashSet<Character> set = new HashSet<>();
 
-        for(char ch: s.toCharArray()){
-            set.add(ch);
+        // for(char ch: s.toCharArray()){
+        //     set.add(ch);
+        // }
+        for(int i=0; i<s.length(); i++){
+            set.add(s.charAt(i));
         }
         return set.size()==26;
     }
