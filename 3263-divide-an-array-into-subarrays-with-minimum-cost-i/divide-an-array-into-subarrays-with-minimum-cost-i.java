@@ -1,19 +1,8 @@
 class Solution {
     public int minimumCost(int[] nums) {
         int n = nums.length;
-        int felement=nums[0];
+        Arrays.sort(nums,1,nums.length);
 
-        int firstMin =Integer.MAX_VALUE;
-        int secondMin =Integer.MAX_VALUE;
-
-        for(int i=1; i<n; i++){
-            if(nums[i] < firstMin){
-                secondMin=firstMin;
-                firstMin=nums[i];
-            }else if(nums[i] < secondMin && secondMin !=firstMin){
-                secondMin =nums[i];
-            }
-        }
-        return felement+ firstMin + secondMin;
+        return nums[0]+ nums[1]+ nums[2];
     }
 }
